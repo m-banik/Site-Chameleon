@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: transparent;
+  font-family: "arial", sans-serif;
+}
+
+.circle {
+  position: fixed;
+  width: 5vw;
+  height: 5vw;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+div.red {
+  top: 2%;
+  left: 2%;
+  background-color: #f00;
+}
+
+div.green {
+  top: 2%;
+  right: 2%;
+  background-color: #0a0;
+}
+
+div.blue {
+  bottom: 2%;
+  left: 2%;
+  background-color: #00f;
+}
+
+div.orange {
+  bottom: 2%;
+  right: 2%;
+  background-color: orange;
+}
+
+.bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #777;
+  transition: 2s;
+  z-index: -1;
+}
+
+p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  font-size: 60px;
+  line-height: 100vh;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 2s;
+}
+
+div.red:hover~div.bg {
+  background-color: #f00;
+}
+
+div.green:hover~div.bg {
+  background-color: #0a0;
+}
+
+div.blue:hover~div.bg {
+  background-color: #00f;
+}
+
+div.orange:hover~div.bg {
+  background-color: orange;
+}
+
+div.red:hover~div.bg>p.red,
+div.green:hover~div.bg>p.green,
+div.blue:hover~div.bg>p.blue,
+div.orange:hover~div.bg>p.orange {
+  color: #fff;
+}
